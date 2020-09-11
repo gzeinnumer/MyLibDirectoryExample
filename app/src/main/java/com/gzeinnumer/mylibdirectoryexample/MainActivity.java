@@ -112,8 +112,10 @@ public class MainActivity extends AppCompatActivity {
     private void onFunctionGlobalFileActionCreateFile() {
         String[] data = new String[]{"Hallo GZeinNumer Again", "File Creating", "File Created"};
 
+        String fileName="/MyFile.txt";
+        String saveTo="/";
         //   /storage/emulated/0/MyLibsTesting/MyFile.txt
-        if (FunctionGlobalFile.initFile("/MyFile.txt", data)) {
+        if (FunctionGlobalFile.initFile(fileName,saveTo, data)) {
             Toast.makeText(this, "File berhasil dibuat", Toast.LENGTH_SHORT).show();
 
             onFunctionGlobalFileActionReadFile();
@@ -124,7 +126,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void onFunctionGlobalFileActionReadFile() {
         //   /storage/emulated/0/MyLibsTesting/MyFile.txt
-        List<String> list = FunctionGlobalFile.readFile("/MyFile.txt");
+        String path = "/MyFile.txt";
+        List<String> list = FunctionGlobalFile.readFile(path);
         String value_0 = list.get(0);
         Toast.makeText(this, "Jumlah baris : " + list.size() + " , " + value_0, Toast.LENGTH_SHORT).show();
 
@@ -140,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
             if (FunctionGlobalFile.appentText(path, messages)) {
                 Toast.makeText(this, "Line baru ditambah ke file", Toast.LENGTH_SHORT).show();
 
-                List<String> list = FunctionGlobalFile.readFile("/MyFile.txt");
+                List<String> list = FunctionGlobalFile.readFile(path);
 
                 Toast.makeText(this, "Jumlah baris setelah ditambahkan: " + list.size(), Toast.LENGTH_SHORT).show();
             } else {
@@ -165,6 +168,9 @@ public class MainActivity extends AppCompatActivity {
 
         //   /storage/emulated/0/MyLibsTesting/zipLocation
         String zipLocation = "/zipLocation";
+        //atau
+        //   /storage/emulated/0/MyLibsTesting/
+        //String zipLocation = "/"; // jika tidak mau diletakan dalam folder
 
         //decode string menjadi file dan extrack ke tujuan zipLocation
         //   /storage/emulated/0/MyLibsTesting/zipLocation
@@ -281,6 +287,7 @@ public class MainActivity extends AppCompatActivity {
 
         String imgUrl = "https://avatars3.githubusercontent.com/u/45892408?s=460&u=94158c6479290600dcc39bc0a52c74e4971320fc&v=4";
         String saveTo = "/Foto_Download"; //   /storage/emulated/0/MyLibsTesting/Foto_Download
+        //String saveTo = "/"; //   /storage/emulated/0/MyLibsTesting/     //Jika tidak mau diletakan dalam folder
         String fileName = "file name.jpg";
 
         // jika file name ada di akhir link seperti dibawah, maka kamu bsa gunakan cara seperti ini
