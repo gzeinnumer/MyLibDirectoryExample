@@ -68,22 +68,25 @@ public class FileActivity extends AppCompatActivity {
         String fileName = "/MyFile.txt";
         String saveTo = "/";
         if (FGFile.initFile(fileName, saveTo, data)) {
-            Toast.makeText(this, "File berhasil dibuat", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "File MyFile.txt created", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "File gagal dibuat", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "File MyFile.txt not created", Toast.LENGTH_SHORT).show();
         }
     }
 
     private void btnIsFileExistsAction() {
         boolean isExists = FGFile.isFileExists("/MyFile.txt");
+        Toast.makeText(this, "File MyFile.txt exists : " + isExists, Toast.LENGTH_SHORT).show();
     }
 
     private void btnDeleteFileAction() {
         boolean isDeleted = FGFile.deleteDir("/MyFile.txt");
+        Toast.makeText(this, "File MyFile.txt deleted : " + isDeleted, Toast.LENGTH_SHORT).show();
     }
 
     private void btnDeleteAllFileAction() {
         FGFile.deleteAllFile("/folder1");
+        Toast.makeText(this, "/folder1 deleted : true", Toast.LENGTH_SHORT).show();
     }
 
     private void btnReadFileAction() {
@@ -92,9 +95,9 @@ public class FileActivity extends AppCompatActivity {
             // /storage/emulated/0/MyLibsTesting/MyFile.txt
             List<String> list = FGFile.readFile("/MyFile.txt");
             String value_0 = list.get(0);
-            Toast.makeText(this, "Jumlah baris : " + list.size(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "List size : " + list.size(), Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "File MyText.txt not found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "File MyFile.txt not found", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -105,12 +108,12 @@ public class FileActivity extends AppCompatActivity {
             String[] messages = {"Pesan ini akan ditambahkan ke file di line baru 1", "Pesan ini akan ditambahkan ke file di line baru 2"};
             //function untuk menambah text ke file yang sudah dibuat sebelumnya
             if (FGFile.appentText(path, messages)) {
-                Toast.makeText(this, "Added new test", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Added new line in MyFile.txt", Toast.LENGTH_SHORT).show();
             } else {
-                Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Error add new line", Toast.LENGTH_SHORT).show();
             }
         } else {
-            Toast.makeText(this, "File MyText.txt not found", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "File MyFile.txt not found", Toast.LENGTH_SHORT).show();
         }
     }
 }

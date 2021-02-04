@@ -33,7 +33,7 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
-    implementation 'com.github.gzeinnumer:MyLibDirectory:1.5.4'
+    implementation 'com.github.gzeinnumer:MyLibDirectory:1.5.5'
     implementation 'com.github.gzeinnumer:MyLibStyle:0.1.5'
     implementation 'com.google.android.material:material:1.2.1'
 }

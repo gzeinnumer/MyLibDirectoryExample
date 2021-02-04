@@ -9,37 +9,37 @@
 
     <Button
         android:id="@+id/btn_directory"
-        style="@style/MyTextHeader"
+        style="@style/MyButtonContained"
         android:layout_margin="@dimen/def_margin_half"
         android:text="Function Global Directory" />
 
     <Button
         android:id="@+id/btn_file"
-        style="@style/MyTextHeader"
+        style="@style/MyButtonContained"
         android:layout_margin="@dimen/def_margin_half"
         android:text="Function Global File" />
 
     <Button
         android:id="@+id/btn_zip"
-        style="@style/MyTextHeader"
+        style="@style/MyButtonContained"
         android:layout_margin="@dimen/def_margin_half"
         android:text="Function Global Zip" />
 
     <Button
         android:id="@+id/btn_camera"
-        style="@style/MyTextHeader"
+        style="@style/MyButtonContained"
         android:layout_margin="@dimen/def_margin_half"
         android:text="Function Global Camera" />
 
     <Button
         android:id="@+id/btn_galery"
-        style="@style/MyTextHeader"
+        style="@style/MyButtonContained"
         android:layout_margin="@dimen/def_margin_half"
         android:text="Function Global Galery" />
 
     <Button
         android:id="@+id/btn_internet"
-        style="@style/MyTextHeader"
+        style="@style/MyButtonContained"
         android:layout_margin="@dimen/def_margin_half"
         android:text="Function Global Image Internet" />
 

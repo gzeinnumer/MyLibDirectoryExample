@@ -56,12 +56,12 @@ public class DirectoryActivity extends AppCompatActivity {
     }
 
     private void existsFolder() {
-        boolean isExists = FGDir.isFileExists("/folder1");
-        Toast.makeText(this, "/folder1 exists : " + isExists, Toast.LENGTH_SHORT).show();
+        boolean isExists = FGDir.isFileExists("/folder1/folder1_1");
+        Toast.makeText(this, "/folder1/folder1_1 exists : " + isExists, Toast.LENGTH_SHORT).show();
     }
 
     private void deleteFolder() {
-        boolean isDeleted = FGDir.deleteDir("/folder1");
-        Toast.makeText(this, "/folder1 delete : " + isDeleted, Toast.LENGTH_SHORT).show();
+        boolean isDeleted = FGDir.deleteDir("/folder1/folder1_1");
+        Toast.makeText(this, "/folder1/folder1_1 delete : " + isDeleted, Toast.LENGTH_SHORT).show();
     }
 }
