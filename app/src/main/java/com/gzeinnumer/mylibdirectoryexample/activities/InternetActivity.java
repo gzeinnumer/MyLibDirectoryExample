@@ -32,6 +32,7 @@ public class InternetActivity extends AppCompatActivity {
         });
     }
 
+
     private void onSuccessCheckPermitions() {
         String imgUrl = "https://avatars3.githubusercontent.com/u/45892408?s=460&u=94158c6479290600dcc39bc0a52c74e4971320fc&v=4";
         String saveTo = "/Foto_Download"; //   /storage/emulated/0/MyLibsTesting/Foto_Download
@@ -42,11 +43,11 @@ public class InternetActivity extends AppCompatActivity {
         // imgUrl = "https://helpx.adobe.com/content/dam/help/en/stock/how-to/visual-reverse-image-search/jcr_content/main-pars/image/visual-reverse-image-search-v2_intro.jpg";
         // String fileName = imgUrl.substring(url.lastIndexOf('/') + 1, url.length());
 
-        boolean overwriteExistingFiles = true;
-
+        boolean isNew = false;
         //pilih 1 atau 2
         //1. jika isNew true maka file lama akan dihapus dan diganti dengan yang baru.
-        FGFile.initFileImageFromInternet(getApplicationContext(), imgUrl, saveTo, fileName, overwriteExistingFiles, new FGFile.ImageLoadCallBack() {
+        //2. jika isNew false maka akan otomatis load file dan disimpan, tapi jika file belum ada, maka akan tetap didownload.
+        FGFile.initFileImageFromInternet(getApplicationContext(), imgUrl, saveTo, fileName, isNew, new FGFile.ImageLoadCallBack() {
             @Override
             public void onBitmapReturn(Bitmap bitmap, String path, String msg) {
                 imageView.setImageBitmap(bitmap);
@@ -54,14 +55,5 @@ public class InternetActivity extends AppCompatActivity {
                 Toast.makeText(InternetActivity.this, "onBitmapReturn: " + msg, Toast.LENGTH_SHORT).show();
             }
         });
-        //2. jika isNew false maka akan otomatis load file dan disimpan, tapi jika file belum ada, maka akan tetap didownload.
-//        FGFile.initFileImageFromInternet(getApplicationContext(), imgUrl, saveTo, fileName, overwriteExistingFiles, new FGFile.ImageLoadCallBack() {
-//            @Override
-//            public void onBitmapReturn(Bitmap bitmap, String path, String msg) {
-//                imageView.setImageBitmap(bitmap);
-//                Toast.makeText(InternetActivity.this, "onBitmapReturn: "+path, Toast.LENGTH_SHORT).show();
-//                Toast.makeText(InternetActivity.this, "onBitmapReturn: "+msg, Toast.LENGTH_SHORT).show();
-//            }
-//        });
     }
 }
