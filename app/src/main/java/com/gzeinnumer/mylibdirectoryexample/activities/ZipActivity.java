@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.gzeinnumer.gzndirectory.helper.FGZip;
+import com.gzeinnumer.eeda.helper.FGZip;
 import com.gzeinnumer.mylibdirectoryexample.R;
 
 public class ZipActivity extends AppCompatActivity {

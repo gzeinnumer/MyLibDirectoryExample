@@ -13,8 +13,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.FileProvider;
 
 import com.bumptech.glide.Glide;
-import com.gzeinnumer.gzndirectory.helper.FGFile;
-import com.gzeinnumer.gzndirectory.helper.imagePicker.FileCompressor;
+import com.gzeinnumer.eeda.helper.FGFile;
+import com.gzeinnumer.eeda.helper.imagePicker.FileCompressor;
 import com.gzeinnumer.mylibdirectoryexample.BuildConfig;
 import com.gzeinnumer.mylibdirectoryexample.R;
 

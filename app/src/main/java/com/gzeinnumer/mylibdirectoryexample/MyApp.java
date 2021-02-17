@@ -2,7 +2,7 @@ package com.gzeinnumer.mylibdirectoryexample;
 
 import android.app.Application;
 
-import com.gzeinnumer.gzndirectory.helper.FGDir;
+import com.gzeinnumer.eeda.helper.FGDir;
 
 public class MyApp extends Application {
 

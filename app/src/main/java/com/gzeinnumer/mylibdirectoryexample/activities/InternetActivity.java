@@ -8,7 +8,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.gzeinnumer.gzndirectory.helper.FGFile;
+import com.gzeinnumer.eeda.helper.FGFile;
 import com.gzeinnumer.mylibdirectoryexample.R;
 
 public class InternetActivity extends AppCompatActivity {

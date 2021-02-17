@@ -6,8 +6,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.gzeinnumer.gzndirectory.helper.FGDir;
-import com.gzeinnumer.gzndirectory.helper.FGFile;
+import com.gzeinnumer.eeda.helper.FGDir;
+import com.gzeinnumer.eeda.helper.FGFile;
 import com.gzeinnumer.mylibdirectoryexample.databinding.ActivityFileBinding;
 
 import java.util.List;

@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.gzeinnumer.gzndirectory.helper.FGDir;
+import com.gzeinnumer.eeda.helper.FGDir;
 import com.gzeinnumer.mylibdirectoryexample.databinding.ActivityDirectoryBinding;
 
 public class DirectoryActivity extends AppCompatActivity {

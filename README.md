@@ -1,5 +1,5 @@
 # MyLibDirectoryExample
-From library https://github.com/gzeinnumer/MyLibDirectory
+From library https://github.com/gzeinnumer/EasyExternalDirectoryAndroid
 
 [Download Sample App](https://drive.google.com/file/d/1IoCWDvs70C94JmKYwb813O-FpO2Hza-A/view?usp=sharing)
 

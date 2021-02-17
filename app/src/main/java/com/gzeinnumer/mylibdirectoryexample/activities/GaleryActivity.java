@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.gzeinnumer.gzndirectory.helper.imagePicker.FileCompressor;
+import com.gzeinnumer.eeda.helper.imagePicker.FileCompressor;
 import com.gzeinnumer.mylibdirectoryexample.R;
 
 import java.io.File;
